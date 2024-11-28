@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart with Quantity Adjustments</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .products, .cart-container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .products .product {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+    .products .product:last-child {
+      border-bottom: none;
+    }
+    .product img {
+      width: 80px;
+      border-radius: 5px;
+      margin-right: 20px;
+    }
+    .product-details {
+      flex: 1;
+    }
+    .btn {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    .cart-items {
+      list-style: none;
+      padding: 0;
+    }
+    .cart-items li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .cart-items li:last-child {
+      border-bottom: none;
+    }
+    .quantity-container {
+      display: flex;
+      align-items: center;
+    }
+    .quantity-container input {
+      width: 40px;
+      text-align: center;
+      margin: 0 10px;
+    }
+    .total {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Shopping Cart with Quantity Adjustments</h1>
+
+  <!-- Products Section -->
+  <div id="products" class="products">
+    <p>Loading products...</p>
+  </div>
+
+  <!-- Cart Section -->
+  <div class="cart-container">
+    <h2>Your Cart</h2>
+    <ul id="cartItems" class="cart-items"></ul>
+    <div class="total">Total: $<span id="total">0.00</span></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
